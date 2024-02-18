@@ -1,5 +1,7 @@
 [Unit]
 Description=Expose Kind LoadBalancer to the Public
+After=network-online.target
+Wants=network-online.target
 
 [Service]
 ExecStart=/usr/local/bin/kind-exposer %i
